@@ -1,0 +1,30 @@
+<html>
+ <head>
+  <title>Clock using Javascript</title>
+     <style>
+     #panel{
+      font-size: 150px;
+      color: red;
+      text-align: center;
+     }
+     </style>
+    <script>
+       function clock(){
+           var d=new Date();
+           var h=d.getHours();
+           var m=d.getMinutes();
+           var s=d.getSeconds();
+           document.getElementById("panel").innerText=h+" : "+m+" : "+s;
+           setInterval("clock()",1000);
+        }
+    </script>
+  </head>
+  <body bgcolor="voilet" onload="clock();">
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+     <div id="panel"></div>
+  </body>
+ </html>
